@@ -18,16 +18,25 @@ Apple Music / Spotify follow-along is in the repo but **disabled** for now (see 
 - macOS 14+
 - Network access (streams recitation MP3s from QuranicAudio)
 
-## Build & run
+## Install (double-click app)
+
+```bash
+cd tilawah-overlay
+./scripts/install.sh
+```
+
+Copies **Tilawah Overlay.app** into `/Applications`. Open it from Applications, Spotlight, or the Dock. Quit from the menu bar book icon. Re-run `install.sh` after you change the code.
+
+## Build & run (dev)
 
 ```bash
 cd tilawah-overlay
 ./scripts/run.sh
 ```
 
-A floating panel opens. Use **Play** on the overlay, or the menu bar book icon to pick a surah / reciter.
+Rebuilds a debug `.app` under `.build/` and opens it. Use this while iterating; use `install.sh` for daily launch.
 
-Do **not** run `.build/debug/TilawahOverlay` in the terminal — that binary has no app bundle.
+Do **not** run `.build/debug/TilawahOverlay` or `.build/release/TilawahOverlay` in the terminal — those binaries have no app bundle.
 
 ## Architecture
 
